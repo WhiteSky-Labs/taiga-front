@@ -18,6 +18,11 @@ form
     fieldset
         textarea.description(name="description", ng-model="us.description",
                              ng-attr-placeholder="{{'LIGHTBOX.CREATE_EDIT_US.PLACEHOLDER_DESCRIPTION' | translate}}")
+    fieldset
+        section(ng-if="!isNew")
+          tg-attachments(ng-model="us", type="us")
+        tg-attachmentz(on-add="addAttachment(file)")
+
     div.settings
         fieldset.team-requirement
             input(type="checkbox", name="team_requirement", ng-model="us.team_requirement",

@@ -19,7 +19,7 @@
         min-height: 7rem;
     }
 
-    label {
+    label:not(.icon-plus) {
         border: 1px solid $gray-light;
         color: $grayer;
         cursor: pointer;
